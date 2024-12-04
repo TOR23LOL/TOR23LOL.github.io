@@ -4,6 +4,7 @@
     padding: 0;
 
     svg{transition: 0.7s;}
+    p{text-align: justify;}
 }
 
 body{
@@ -23,6 +24,15 @@ header{
     z-index: 3;
     display: flex;
     justify-content: space-around;
+}
+
+.btn-img{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    svg{height: 5vh; width: auto;}
+    .btn-abrir{color: white;}
 }
 
 .abrir, .cerrar{
@@ -214,10 +224,27 @@ footer{
 }
 
 @media(max-width: 555px){
+    /*CLASES A AGREGAR POR MEDIO DE JAVASCRIPT*/
+    .nav-visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .ocultar-boton{
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    #ocultar{display: none;}
+    /********/
+
     header{
         position: static;
         display: flex;
+        flex-direction: column;
         align-items: center;
+        gap: 10px;
     }
 
     .nav-ul{
@@ -244,7 +271,7 @@ footer{
         border-radius: 25px;
         padding-inline: 2%;
 
-        .btn-cerrar, .btn-abrir{
+        .btn-cerrar, .btn-img .btn-abrir{
             display: flex;
             align-items: center;
             gap: 0 10px;
@@ -257,20 +284,10 @@ footer{
     nav{
         opacity: 0;
         visibility: hidden;
-        display: flex;
+        display: none;
         flex-direction: column;
     }
-    /*CLASES A AGREGAR POR MEDIO DE JAVASCRIPT*/
-    .nav-visible{
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .ocultar-boton{
-        display: none;
-    }
-    /********/
-
+    
     nav ul{
         display: flex;
         flex-direction: column;
